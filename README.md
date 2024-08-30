@@ -12,6 +12,9 @@
 
 VLB is easy to use, making the process as simple as the following steps:
 
+> **ⓘ NOTE:**
+> Keep in mind, you should rename [downloaded file](https://github.com/realyasser/VLB/releases) to `VLB.exe` (Just `VLB` if your operating system (OS) is Linux) if you want to follow these steps exactly. However, you can do the same thing if you replace `VLB` with the filename you have.
+
 **► One-time run:**
 
 If you want to process a single link, run the following command in the folder where the VLB program is located:

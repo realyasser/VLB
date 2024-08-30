@@ -9,7 +9,6 @@ namespace VLN
             AllowAutoRedirect = false
         };
         static HttpClient client = new(handler);
-        static Regex URLRegex = new Regex("^(https?:\\/\\/)([\\da-z\\.-]+\\.[a-z\\.]{2,6}|[\\d\\.]+)([\\/:?=&#]{1}[\\da-z\\.-]+)*[\\/\\?]?$");
 
         static string Request(string url)
         {
@@ -37,7 +36,7 @@ namespace VLN
         public static void FindOrigin(string link)
         {
 
-            if (!URLRegex.IsMatch(link))
+            if (!Uri.IsWellFormedUriString(link, UriKind.Absolute))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("[-] Please input a valid link that includes protocol.");
